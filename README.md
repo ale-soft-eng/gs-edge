@@ -30,3 +30,6 @@ Este projeto implementa um sistema de monitoramento de energia integrado com int
 - WiFi
 - PubSubClient
 - DHT
+
+> [!Observação]
+> Nós perguntamos pro professor se a simulação em arduíno poderia ser feita no arduíno físico e foi permitido. Por isso que não há link do wokwi. Toda a simulação do sistema e a integração entre Arduíno, NodeRED e MQTT foi demonstrada ao vivo no vídeo.
