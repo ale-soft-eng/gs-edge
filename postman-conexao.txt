@@ -1,0 +1,22 @@
+-- CLIENT POSTMAN --
+
+Collection: MQTT
+URL: mqtt://mqtt-dashboard.com:1883
+
+TOPICO: GS_EDGE:POWER_NEW
+Cria nova fonte de luz
+Body:
+{
+    "action": "CREATE_POWER",
+    "id": "id-123",
+    "led_pin": 7,
+    "btn_pin": 2
+}
+
+TOPICO: GS_EDGE:POWER_TOGGLE
+Liga ou desliga fonte de luz cadastrada
+Body:
+{
+    "action": "POWER_TOGGLE",
+    "id": "id-123"
+}

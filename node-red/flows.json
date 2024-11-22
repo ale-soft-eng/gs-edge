@@ -1,0 +1,180 @@
+[
+    {
+        "id": "7e2e1bfe50df2257",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "69a3fb03a3077cdd",
+        "type": "serial in",
+        "z": "7e2e1bfe50df2257",
+        "name": "",
+        "serial": "a6893086891d80c4",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "1d4d28591c56cc1e"
+            ]
+        ]
+    },
+    {
+        "id": "697a842a89f7ec28",
+        "type": "debug",
+        "z": "7e2e1bfe50df2257",
+        "name": "LOGGER",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0e12c50f509314db",
+        "type": "serial out",
+        "z": "7e2e1bfe50df2257",
+        "name": "",
+        "serial": "a6893086891d80c4",
+        "x": 450,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "78ee09e6b09341ab",
+        "type": "mqtt out",
+        "z": "7e2e1bfe50df2257",
+        "name": "",
+        "topic": "GS_EDGE:POWER",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e47982135be97af",
+        "x": 500,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1d4d28591c56cc1e",
+        "type": "json",
+        "z": "7e2e1bfe50df2257",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "697a842a89f7ec28",
+                "78ee09e6b09341ab"
+            ]
+        ]
+    },
+    {
+        "id": "c0c1cd100a72c020",
+        "type": "mqtt in",
+        "z": "7e2e1bfe50df2257",
+        "name": "",
+        "topic": "GS_EDGE:POWER_TOGGLE",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "8e47982135be97af",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "0e12c50f509314db"
+            ]
+        ]
+    },
+    {
+        "id": "502f69d1342eb9d3",
+        "type": "mqtt in",
+        "z": "7e2e1bfe50df2257",
+        "name": "",
+        "topic": "GS_EDGE:POWER_NEW",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "8e47982135be97af",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 500,
+        "wires": [
+            [
+                "0e12c50f509314db"
+            ]
+        ]
+    },
+    {
+        "id": "a6893086891d80c4",
+        "type": "serial-port",
+        "name": "COM3",
+        "serialport": "COM3",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "8e47982135be97af",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
